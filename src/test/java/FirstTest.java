@@ -35,5 +35,6 @@ public class FirstTest {
         System.out.println("Current URL after login: " + currentUrl);
         Assert.assertTrue(currentUrl.contains("shop"), "Login failed or did not navigate to dashboard");
         driver.close();
+        System.out.println("Test completed successfully" );
     }
 }
