@@ -23,20 +23,17 @@ public class Secondtest {
         password.sendKeys("learning");
         signInBtn.click();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-        List<WebElement> Products =driver.findElements(By.cssSelector("app-Card"));
-        for (WebElement Product:Products)
-        {
-            String brand=Product.findElement(By.tagName("h4")).getText();
-            String price=Product.findElement(By.tagName("h5")).getText();
-            String descrption=Product.findElement(By.tagName("p")).getText();
+        List<WebElement> products =driver.findElements(By.cssSelector("div.card-body h4.card-title a"));
 
-            System.out.println("Brand Name;"+brand);
-            System.out.println("Price   ;"+price);
-            System.out.println("Descrption  ;"+descrption);
-
+        for (WebElement product:products) {
+            System.out.println(product.getText());
         }
-        System.out.println("Closing ");
-        System.out.println("open");
+
+        //Print all price of the products
+
+        //Print All product description
+
+        System.out.println("Closing Browser...");
         driver.quit();
 
 
