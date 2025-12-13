@@ -36,7 +36,7 @@ public class Secondtest {
 
         }
         System.out.println("Closing ");
-        System.out.println("");
+        System.out.println("open");
         driver.quit();
 
 
