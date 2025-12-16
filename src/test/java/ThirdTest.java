@@ -47,11 +47,13 @@ public class ThirdTest {
 
         WebElement dates=driver.findElement(By.xpath("//input[@name=\"bday\"]"));
         dates.sendKeys("12082000");
-        driver.findElement(By.xpath("//input[@value=\"Submit\"]"));
+        driver.findElement(By.xpath("//input[@value=\"Submit\"]")).click();
 
-        //driver.findElement(By.xpath("//strong[text()=Success!]"));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+
+        driver.findElement(By.xpath("//strong[text()="Success!"]"));
         String Success=driver.getTitle();
-        System.out.println(Success);
+        System.out.println("The form has been Successfull");
         driver.quit();
     }
 }
