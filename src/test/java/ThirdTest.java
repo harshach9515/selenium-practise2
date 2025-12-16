@@ -51,9 +51,8 @@ public class ThirdTest {
 
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
-        driver.findElement(By.xpath("//strong[text()="Success!"]"));
-        String Success=driver.getTitle();
-        System.out.println("The form has been Successfull");
+        String successMessage = driver.findElement(By.xpath("//strong[text()='Success']")).getText();
+        System.out.println(successMessage);
         driver.quit();
     }
 }
