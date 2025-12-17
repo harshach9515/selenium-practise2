@@ -1,7 +1,7 @@
 public class PageElement2 {
 
     //email input field
-    String emailuserxapth="//input[@id='userEmail']";
+    String emailUserXpath="//input[@id='userEmail']";
     String emailusercss="input[id='userEmail']";
 
     //password input field
@@ -9,13 +9,13 @@ public class PageElement2 {
     String passwordcss="input[id='userPassword']";
 
     //login button
-    String bottonxpath="//input[@id='login']";
-    String bottoncss="input[id='login']";
+    String loginButtonXpath="//input[@id='login']";
+    String loginButtonCss="input[id='login']";
 
     //register here
     //first name textfield
-    String firstnamexpath="//input[@id='firstName']";
-    String firstnamecss="input[id='firstName']";
+    String firstNameNPath="//input[@id='firstName']";
+    String firstNameCss="input[id='firstName']";
 
     //last name textfield
     String lastnamexapth="//input[@id='lastName']";
@@ -53,7 +53,8 @@ public class PageElement2 {
     String rloginxpath="//input[@id='login']";
     String rlogincss="input[id='login']";
 
-
-
+    String productAddToCartButton="//b[text()='ZARA COAT 3']//..//..//button//i[@class='fa fa-shopping-cart']";
+    String cartButton = "//button[@routerlink='/dashboard/cart']";
+    String productName ="div[class='cartSection'] h3";
 
 }

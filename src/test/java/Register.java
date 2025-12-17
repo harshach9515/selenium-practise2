@@ -13,53 +13,48 @@ public class Register {
     @Test
     public void RegisterPage()
     {
+        PageElement2 pageElements=new PageElement2();
         WebDriver driver=new ChromeDriver();
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+
         driver.get("https://rahulshettyacademy.com/client/#/auth/register");
 
-        WebElement firstname=driver.findElement(By.id("firstName"));
-        firstname.sendKeys("vamsi");
+        WebElement firstName=driver.findElement(By.id(pageElements.firstNameNPath));
+        firstName.sendKeys("vamsi");
 
-        WebElement lastname=driver.findElement(By.id("lastName"));
-        lastname.sendKeys("reddy");
+        WebElement lastName=driver.findElement(By.id(pageElements.lastnamexapth));
+        lastName.sendKeys("reddy");
 
-        WebElement email=driver.findElement(By.id("userEmail"));
+        WebElement email=driver.findElement(By.id(pageElements.emailUserXpath));
         email.sendKeys("vsreddy1234@gmail.com");
 
-        WebElement phonenumber=driver.findElement(By.id("userMobile"));
-        phonenumber.sendKeys("9876543210");
+        WebElement phoneNumber=driver.findElement(By.id("userMobile"));
+        phoneNumber.sendKeys("9876543210");
 
-        PageElement2 drop=new PageElement2();
-        //WebElement occupation=driver.findElement(By.id("//select[@formcontrolname='occupation']"));
-        WebElement occupation = driver.findElement(By.xpath(drop.occDropdownxpath));
+
+        WebElement occupation = driver.findElement(By.xpath(pageElements.occDropdownxpath));
         System.out.println(occupation);
 
-        Select occup=new Select(occupation);
-        occup.selectByVisibleText("Student");
+        Select selectOccupation=new Select(occupation);
+        selectOccupation.selectByVisibleText("Student");
 
-       WebElement male= driver.findElement(By.xpath("//input[@value='Male']"));
-       male.click();
+        WebElement male= driver.findElement(By.xpath("//input[@value='Male']"));
+        male.click();
 
         WebElement password=driver.findElement(By.id("userPassword"));
         password.sendKeys("Vamsi@123");
 
-        WebElement conformpassword=driver.findElement(By.id("confirmPassword"));
-        conformpassword.sendKeys("Vamsi@123");
+        WebElement conformPassword=driver.findElement(By.id("confirmPassword"));
+        conformPassword.sendKeys("Vamsi@123");
 
         WebElement age=driver.findElement(By.xpath("//input[@type='checkbox']"));
         age.click();
 
-        //driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@value='Register']")));
 
-        //WebElement register=driver.findElement(By.id("login"));
-        //WebElement register=driver.findElement(By.id("Register"));
-        //register.click();
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-
-        WebElement register = wait.until(
-                ExpectedConditions.elementToBeClickable(
-                        By.xpath("//input[@value='Register']")
-                )
-        );
+        WebElement register=driver.findElement(By.xpath("//input[@value='Register']"));
+        register.click();
         driver.quit();
     }
 }

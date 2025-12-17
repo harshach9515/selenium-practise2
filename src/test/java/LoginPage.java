@@ -17,8 +17,10 @@ public class LoginPage {
         WebElement password=driver.findElement(By.id("userPassword"));
         password.sendKeys("Vamsi@123");
 
-       WebElement loginbtn=driver.findElement(By.id("login"));
-       loginbtn.click();
+        WebElement loginbtn=driver.findElement(By.id("login"));
+        loginbtn.click();
+
+        driver.quit();
     }
 
 
