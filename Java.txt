@@ -1,0 +1,195 @@
+Roadmap to becoming proficient in Selenium WebDriver with Java
+-------------------------------------------------------------
+
+1) Core Java refresh
+---------------------------------
+1. Variables, data types, operators
+2. If/else, loops
+3. Methods, return types
+4. Arrays, String functions
+5. OOP basics: class/object, constructors
+6. Inheritance, polymorphism (basic)
+7. Collections: List, Map
+8. Exception handling (try/catch)
+9. File reading basics (for test data)
+
+2. Web basics
+-----------------
+1. HTML tags, attributes
+2. DOM
+3. id/class/name
+4. input, button, select
+5. iframe
+5. Shadow DOM (just intro)
+6. How browser devtools helps (Inspect)
+
+3) Selenium fundamentals
+-----------------------------
+3.1 WebDriver lifecycle
+. Launch browser
+. maximize
+. implicit wait (explain why not preferred)
+. quit/close
+
+Practice:
+Launch Chrome → open a site → validate title → quit
+
+3.2 Locators (Most important)
+-----------------------------
+. id
+. name
+. cssSelector
+. xpath
+
+Practice tasks:
+. Locate and type into a textbox
+. Click a button
+. Read text from page and assert
+
+Practice mini set
+On any sample login page:
+Enter username/password
+Click login
+Validate error message (wrong credentials)
+
+4) Actions in Selenium
+-----------------------------
+common commands:
+. sendKeys, click, clear, getText, getAttribute
+. isDisplayed, isEnabled, isSelected
+. Dropdown: Select class
+. Radio/checkbox
+. Alerts
+. Windows/tabs
+. Frames/iframes
+. Mouse & keyboard actions (Actions class)
+
+Practice examples:
+. Dropdown practice
+. Select by visible text, index, value
+. Alert practice
+. Accept / Dismiss and validate alert text
+. Window practice
+. Click link that opens new tab → switch → validate title → close new tab → back
+
+5) Waits
+-----------------------------
+. Why Thread.sleep() is bad
+. Implicit wait vs explicit wait
+. WebDriverWait + ExpectedConditions
+
+Practice examples:
+. Wait for element to be clickable
+. Wait for visibility
+. Wait for URL contains / title contains
+. Wait for text to be present
+
+6) Test framework basics with TestNG
+-----------------------------
+. Why use a test framework
+. TestNG intro
+. Annotations overview
+. TestNG XML basics
+. Running tests via XML
+
+. @BeforeMethod, @AfterMethod
+. Assertions
+. Groups
+. Parameters
+. DataProvider
+. Parallel (intro)
+
+Practice
+Create 3 test methods:
+. valid login
+. invalid login
+. logout
+. Use DataProvider for invalid login (3 sets)
+
+7) Page Object Model (POM)
+-----------------------------
+. What is POM
+. Why POM
+. POM structure
+
+. Page classes: locators + methods
+. Test class: only calls page methods
+. Base class: driver setup + teardown
+. Utilities: waits, screenshots
+
+Practice
+Build POM for:
+. LoginPage (enterUser, enterPass, clickLogin, getError)
+. HomePage (verifyUser, logout)
+
+8) Real-world patterns
+-----------------------
+. Singleton WebDriver
+. Config file reading (Properties class)
+
+
+. Reusable methods: click, type, waitAndClick
+. Config files: config.properties (url, browser)
+. Logging (log4j / slf4j)
+. Screenshots on failure
+. Reporting (Extent Reports / Allure) (basic integration)
+. Maven profiles (optional)
+
+Practice
+. Read URL/browser from config
+. On failure take screenshot and attach path in console/log
+
+9) Mini Projects to consolidate learning
+----------------------------------------
+Project 1: Login Automation Suite
+
+Features
+. POM
+. TestNG
+. DataProvider
+. Explicit waits
+. Screenshot on failure
+
+Test cases
+. invalid login (3 datasets)
+. valid login
+. logout
+. verify error messages
+
+Project 2: E-commerce Flow
+
+Flow
+. Search product → add to cart → validate cart → remove
+
+Skills covered
+locators + waits + assertions
+handling dynamic elements
+
+Project 3: End-to-end Framework
+
+. Maven structured framework
+. POM
+. TestNG runner
+. Extent/Allure report
+. Jenkins execution (basic)
+. Parallel execution (2 threads)
+
+
+Daily practice drill
+--------------------
+
+. Write 2 CSS selectors + 2 XPaths for random elements
+. Automate 1 small flow (2–4 steps)
+. Add 1 assertion
+. Replace 1 hard wait with explicit wait
+. Refactor into a Page Object method
+
+Interview-focused practice questions (assignments)
+-------------------------------
+. What is Selenium WebDriver?
+. Difference: close() vs quit()
+. implicit vs explicit waits
+. how to handle iframe/window/alert
+. StaleElementReferenceException: why and fix
+. How to design framework in POM
+. How to run tests in parallel
