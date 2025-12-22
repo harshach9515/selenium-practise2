@@ -1,8 +1,8 @@
 public class JavaTypeProgram {
     public static void main(String[] args) {
 
-        int age = 25;
-        double salary = 45000.50;
+        int age = 15;
+        double salary = 2000.10;
         char grade = 'A';
         boolean isWorking = true;
         String name = "Vamsi";

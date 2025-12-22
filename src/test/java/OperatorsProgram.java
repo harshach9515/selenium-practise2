@@ -1,8 +1,8 @@
 public class OperatorsProgram {
     public static void main(String[] args) {
 
-        int a = 10;
-        int b = 5;
+        int a = 20;
+        int b = 15;
 
         // Arithmetic Operators
         System.out.println("Addition: " + (a + b));
