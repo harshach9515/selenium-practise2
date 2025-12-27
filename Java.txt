@@ -3,7 +3,8 @@ Roadmap to becoming proficient in Selenium WebDriver with Java
 
 1) Core Java refresh
 ---------------------------------
-1. Variables, data types, operators
+1. Variables, data types, operators = DataType Name = value
+   . (String,int,Double,Boolean,Float,Char,Array)
 2. If/else, loops
 3. Methods, return types
 4. Arrays, String functions
@@ -119,7 +120,7 @@ Create 3 test methods:
 
 Practice
 Build POM for:
-. LoginPage (enterUser, enterPass, clickLogin, getError)
+. com.pratice.LoginPage (enterUser, enterPass, clickLogin, getError)
 . HomePage (verifyUser, logout)
 
 8) Real-world patterns

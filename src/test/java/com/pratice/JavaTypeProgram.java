@@ -1,3 +1,5 @@
+package com.pratice;
+
 public class JavaTypeProgram {
     public static void main(String[] args) {
 

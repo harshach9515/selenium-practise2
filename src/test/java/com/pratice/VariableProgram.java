@@ -1,3 +1,5 @@
+package com.pratice;
+
 public class VariableProgram {
     public static void main(String[] args) {
 

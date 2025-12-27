@@ -1,3 +1,5 @@
+package com.pratice;
+
 public class PageElements {
 
     //userName Label

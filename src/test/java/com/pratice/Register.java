@@ -1,3 +1,5 @@
+package com.pratice;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -19,10 +21,10 @@ public class Register {
 
         driver.get("https://rahulshettyacademy.com/client/#/auth/register");
 
-        WebElement firstName=driver.findElement(By.id(pageElements.firstNameNPath));
+        WebElement firstName=driver.findElement(By.id(pageElements.firstNameXPath));
         firstName.sendKeys("vamsi");
 
-        WebElement lastName=driver.findElement(By.id(pageElements.lastnamexapth));
+        WebElement lastName=driver.findElement(By.id(pageElements.lastNameXpath));
         lastName.sendKeys("reddy");
 
         WebElement email=driver.findElement(By.id(pageElements.emailUserXpath));
@@ -32,7 +34,7 @@ public class Register {
         phoneNumber.sendKeys("9876543210");
 
 
-        WebElement occupation = driver.findElement(By.xpath(pageElements.occDropdownxpath));
+        WebElement occupation = driver.findElement(By.xpath(pageElements.occDropdownXpath));
         System.out.println(occupation);
 
         Select selectOccupation=new Select(occupation);
@@ -51,9 +53,9 @@ public class Register {
         age.click();
 
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@value='Register']")));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@value='com.pratice.Register']")));
 
-        WebElement register=driver.findElement(By.xpath("//input[@value='Register']"));
+        WebElement register=driver.findElement(By.xpath("//input[@value='com.pratice.Register']"));
         register.click();
         driver.quit();
     }

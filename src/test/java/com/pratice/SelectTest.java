@@ -1,3 +1,5 @@
+package com.pratice;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -26,7 +28,7 @@ public class SelectTest {
         username.sendKeys("rahulshettyacademy");
         password.sendKeys("learning");
 
-        //Create object of PageElements class to access the locators
+        //Create object of com.pratice.PageElements class to access the locators
         PageElements pageElements = new PageElements();
         WebElement element = driver.findElement(By.xpath(pageElements.selectDropdownXpath));
         System.out.println(element);

@@ -1,3 +1,5 @@
+package com.pratice;
+
 public class OperatorsProgram {
     public static void main(String[] args) {
 
