@@ -39,6 +39,10 @@ public class StringsMethods {
         String text = "I am Vamsi";
         System.out.println(text.replace("Vamsi", "Harsha"));
 
+        //trim
+        String nme = "  Vamsi  ";
+        System.out.println(nme.trim());
+
 
     }
 }
