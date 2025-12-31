@@ -43,6 +43,14 @@ public class StringsMethods {
         String nme = "  Vamsi  ";
         System.out.println(nme.trim());
 
+        //startsWith
+        String start = "Vamsi Programming";
+        System.out.println(start.startsWith("Vamsi"));
+
+        //endsWith
+        String txt = "Hello.vamsi";
+        System.out.println(txt.endsWith("vamsi"));
+
 
     }
 }
