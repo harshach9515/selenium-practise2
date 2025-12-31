@@ -12,5 +12,6 @@ public class CountProgram {
 
         int length = text.length();
         return length;
+
     }
 }
